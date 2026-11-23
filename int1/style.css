@@ -27,12 +27,16 @@ h1,h2{
     color: var(--white-important-text);
 }
 
-p,h3{
+main,section,h3,.login{
     color: var(--white-normal-text);
 }
 
 li{
     list-style: none;
+}
+
+p{
+    font-size: var(--text-mobile);
 }
 
 a{
@@ -46,21 +50,38 @@ a{
 
 /* HEADER */
 
-header,.account,.pandem{
+header,.account,.pandem,.signup p{
     display: flex;
     align-items: center;
 }
 
 header{
-    width: 90%;
+    width: 100%;
     justify-content: space-between;
-    padding: 12px;
+    padding: 12px 5%;
+    border-bottom: 1px solid #27272A;
 }
 
 .account{
     gap: 16px;
 }
 
+.signup{
+    color: #18181B;
+    padding: 2px 8px;
+    background-color: var(--white-important-text);
+    border-radius: 6px;
+}
+
+.signup p{
+    width: 53px;
+    height: 28px;
+    font-weight: 600;
+}
+
 .pandem{
     gap: 12px;
+    color: #FFF;
 }
+
+/* MAIN */
