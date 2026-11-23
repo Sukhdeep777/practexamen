@@ -1,0 +1,13 @@
+:root{
+    --background-color:#18181B;
+    --white-important-text: #FAFAFA;
+    --white-normal-text: #D9D9D9;
+    --dark-border: #27272A;
+    --text-mobile:14px;
+    --text-pc:18px;
+    --h2: 30px;
+}
+
+*{
+    box-sizing: border-box;
+}
