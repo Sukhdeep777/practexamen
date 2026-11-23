@@ -1,5 +1,5 @@
 :root{
-    --background-color:#18181B;
+    --background-color:#09090B;
     --white-important-text: #FAFAFA;
     --white-normal-text: #D9D9D9;
     --dark-border: #27272A;
@@ -10,6 +10,8 @@
 
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body{
@@ -25,5 +27,14 @@ h1,h2{
 }
 
 p,h3{
+    color: var(--white-normal-text);
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
     color: var(--white-normal-text);
 }
