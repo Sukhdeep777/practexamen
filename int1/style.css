@@ -56,20 +56,27 @@ a{
 
 /* HEADER */
 
-header,.account,.pandem,.signup p{
+header,.account,.pandem,.signup p, footer{
     display: flex;
     align-items: center;
 }
 
-header{
+header, footer{
     width: 100%;
     justify-content: space-between;
     padding: 12px 5%;
+}
+
+header{
     border-bottom: 1px solid #27272A;
 }
 
 .account{
     gap: 16px;
+}
+
+.menu{
+    display: none;
 }
 
 .signup{
@@ -136,7 +143,7 @@ h1{
 }
 
 .img-maing{
-    min-width: 311px;
+    min-width: 211px;
     max-width: 1024px;
 }
 
@@ -147,6 +154,17 @@ h1{
 
 /*  SECTION */
 
+.sct-solution{
+    margin-bottom: 106px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sct-solution h1,.demo-text h1{
+    display: none;
+}
+
 .sct-solution h2{
     margin-bottom: 48px;
 }
@@ -156,7 +174,14 @@ h1{
     display: flex;
     flex-direction: column;
     gap: 48px;
-    margin-bottom: 96px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.solutions-item{
+    width: 288px;
+    height: 220px;
 }
 
 .frame{
@@ -186,6 +211,103 @@ h3{
 }
 
 .img-maing2{
-    min-width: 311px;
+    min-width: 211px;
     max-width: 672px;
+}
+
+.img-maing2 img{
+    margin: 0;
+    margin-bottom: 96px;
+}
+
+.demo-start{
+    margin-bottom: 96px;
+}
+
+.demo-start p{
+    margin: 24px 0;
+    font-size: var(--text-pc);
+}
+
+/* FOOTER */
+
+footer{
+    border-top: 1px solid #27272A;
+}
+
+
+.menu ul,.menu2 ul{
+    display: flex;  
+    gap: 12px;
+}
+
+
+
+/* Media QUERIES */
+@media screen and (min-width: 1440px){
+    main{
+        margin: 144px 0;
+    }
+
+    .intro-pandem p, .demo-text p{
+        line-height: 18px;
+    }
+
+
+    .intro-pandem p{
+        font-size: var(--text-pc);
+    }
+
+    .menu, .demo-text h1{
+        display: block;
+    }
+
+    .img-maing{
+        margin-top: 48px;
+    }
+
+    .img-maing2{
+        margin-top: 24px;
+    }
+
+    .demo-text h1{
+        width: 672px;
+        margin-top: 100px;
+    }
+
+    .demo-text p{
+        font-size: var(--text-pc);
+        width: 672px;
+    }
+
+    .signup p{
+        width: 85px;
+        justify-content: center;
+    }
+    .pandem,.menu ul{
+        gap: 32px;
+    }
+
+    .menu-mobile,.sct-solution h2, .demo-text h2{
+        display: none;
+    }
+
+    .sct-solution,.demo-text,.demo-start{
+        margin-bottom: 144px;
+    }
+
+    .sct-solution h1{
+        display: block;
+        margin-bottom: 48px;
+    }
+    
+    .type2{
+        width: 328px;
+        text-align: end;
+    }
+
+    .wh{
+        display: none;
+    }
+
 }
