@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="/contacte" method="POST">
+        <fieldset>
+            <legend>Dades personals</legend>
+
+            <label for="nom">Nom:</label>
+            <input type="text" name="nom" id="nom" required>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="edat">Edat:</label>
+            <input type="number" name="edat" id="edat" min="18" max="100">
+        </fieldset>
+        <fieldset>
+            <legend>Preferències</legend>
+
+            <label for="pais">País:</label>
+            <select name="pais" id="pais">
+                <option value="">Selecciona...</option>
+                <option value="es">Es</option>
+                <option value="fr">Fr</option>
+            </select>
+
+            <p>Interessos</p>
+            <input type="checkbox" name="interessos" value="esports" id="esports">
+            <label for="esports">Esports</label>
+
+            <input type="checkbox" name="interessos" value="musica" id="musica">
+            <label for="musica">Música</label>
+        </fieldset>
+
+        <label for="missatge">Missatge:</label>
+        <textarea name="missatge" rows="5" cols="40" id="missatge"></textarea>
+
+
+        <button type="submit">Enviar</button>
+        <button type="reset">Netejar</button>
+    </form>
+
+    <form action="/contacte">
+        <label for="ciutat">Ciutat:</label>
+        <input type="text" id="ciutat" name="ciutat" list="llista_ciutats" />
+        <datalist id="llista_ciutats">
+            <option value="Barcelona"></option>
+            <option value="Girona"></option>
+            <option value="Lleida"></option>
+            <option value="Tarragona"></option>
+            <option value="València"></option>
+        </datalist>
+        <!--  -->
+        <form oninput="resultat.value = parseInt(a.value) + parseInt(b.value)">
+            <input type="number" id="a" name="a" value="10" />
+            +
+            <input type="number" id="b" name="b" value="20" />
+            =
+            <output name="resultat" for="a b">30</output>
+        </form>
+        <label for="progrés">Progrés de la tasca:</label>
+        <progress id="progrés" value="65" max="100">65%</progress>
+    </form>
+<form action="#" method="POST">
+    <fieldset>
+        <legend>Selecciona tu lenguaje favorito:</legend>
+
+        <div>
+            <input type="radio" id="opcion-html" name="lenguaje" value="html" checked>
+            <label for="opcion-html">HTML</label>
+        </div>
+
+        <div>
+            <input type="radio" id="opcion-css" name="lenguaje" value="css">
+            <label for="opcion-css">CSS</label>
+        </div>
+
+        <div>
+            <input type="radio" id="opcion-c" name="lenguaje" value="c">
+            <label for="opcion-c">C / C++</label>
+        </div>
+    </fieldset>
+
+    <button type="submit">Enviar respuesta</button>
+</form>
+</body>
+</html>

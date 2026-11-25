@@ -1,0 +1,129 @@
+/* 1. RESET BÁSICO Y FUENTE GENERAL */
+* {
+    box-sizing: border-box; /* Hace que el padding no agrande las cajas más de lo debido */
+    font-family: system-ui, -apple-system, sans-serif; /* Tipografía limpia del sistema */
+}
+
+body {
+    background-color: #f4f6f9; /* Fondo gris muy suave para que destaquen los formularios */
+    color: #333;
+    padding: 30px 15px; /* Aire alrededor de toda la página */
+    margin: 0;
+}
+
+/* 2. CONTENEDORES PRINCIPALES (Tarjetas) */
+form {
+    background-color: #ffffff;
+    max-width: 550px; /* Evita que se estire demasiado en pantallas grandes */
+    margin: 0 auto 30px auto; /* Centra el formulario y separa unos de otros por abajo */
+    padding: 25px 30px; /* Espacio interior entre el borde y los inputs */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Sombra suave estilo tarjeta */
+}
+
+/* 3. AGRUPACIONES (Fieldset y Legend) */
+fieldset {
+    border: 1px solid #dce1e7;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: 700;
+    color: #0066ff;
+    padding: 0 8px; /* Deja un poco de blanco a los lados del texto sobre la línea */
+}
+
+/* 4. ETIQUETAS (Labels y párrafos de título) */
+label, fieldset p {
+    display: block; /* Obliga a que el texto quede arriba y el input salte abajo */
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 14px;
+    margin-bottom: 6px;
+}
+
+/* Excepción: los labels que van al lado de un checkbox o radio */
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+    display: inline-block; /* Se quedan en la misma línea que su cajita */
+    font-weight: 400;
+    margin-top: 0;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+/* 5. CAMPOS DE TEXTO, SELECTS Y TEXTAREA */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    width: 100%; /* Ocupan todo el ancho disponible de su contenedor */
+    padding: 10px 12px; /* Aire interior para que el texto no toque los bordes */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: #fafafa;
+}
+
+/* Efecto al hacer clic dentro de un campo */
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #0066ff;
+    background-color: #ffffff;
+}
+
+/* Ajuste para los inputs de la calculadora (a + b = resultado) */
+form[oninput] input[type="number"] {
+    width: 80px; /* Más estrechos para que quepan en una sola línea */
+    display: inline-block;
+}
+
+output {
+    font-weight: bold;
+    font-size: 18px;
+    color: #0066ff;
+}
+
+/* 6. BARRA DE PROGRESO Y RADIO DIVS */
+progress {
+    width: 100%;
+    height: 18px;
+    margin-top: 5px;
+}
+
+fieldset div {
+    margin-bottom: 8px; /* Separa verticalmente las opciones del radio button */
+}
+
+/* 7. BOTONES */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+button[type="submit"] {
+    background-color: #0066ff;
+    color: #ffffff;
+}
+
+button[type="submit"]:hover {
+    background-color: #0052cc; /* Oscurece un poco al pasar el ratón */
+}
+
+button[type="reset"] {
+    background-color: #e2e8f0;
+    color: #333333;
+}
+
+button[type="reset"]:hover {
+    background-color: #cbd5e1;
+}
